@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>골프 티 꽂기 게임</title>
+    <link rel="stylesheet" href="style.css" />
+<!--     <script defer src="script.js"></script> -->
+    
+  </head>
+  <body>
+    <!-- 인트로 화면 -->
+    <div id="introScreen" class="intro-screen">
+      <div class="app-header">
+        <span class="app-title">← </span>
+      </div>
+      <img src="https://i.ibb.co/TxytBvp6/page.png" class="intro-image" alt="인트로 배경" />
+      <div class="intro-overlay">
+        <div class="intro-title-box">
+          <h1 class="intro-title">
+            티 꽂기 게임에 성공하면<br />
+            <span class="gradient-text">스크린골프 5,000원 쿠폰</span>을 드려요
+          </h1>
+        </div>
+<!--         
+        <p class="intro-subtitle">
+          5단계까지 통과하면<br />
+          <span>스크린골프 5천원 할인 쿠폰</span> 즉시 지급
+        </p> -->
+        
+        
+        <div class="intro-buttons">
+          <button id="shareBtn">친구에게 공유하기</button>
+<!--           <button id="startChallengeBtn"  class="start-btn">
+            게임 시작하기 -->
+          <button id="startChallengeBtn"  class="gradient-button">티꽂기 게임 시작하기
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 게임 화면 -->
+    <div id="gameScreen" class="mobile-frame hidden">
+      <div class="app-header">
+        <span class="app-title">← </span>
+      </div>
+
+      <div class="game">
+        <div class="game-overlay">
+
+          <!-- 상단 메시지 박스 -->
+          <div class="top-ui">
+            <div class="status-bar">
+              <div id="hearts"  class="hearts"></div>
+              <div id="stage"></div>
+            </div>
+          </div>
+
+          <!-- 필드 영역 -->
+          <div class="field">
+            <div class="tee-container">
+              <div class="ball"></div>
+              <div class="tee-image-wrapper">
+                <img
+                  src="https://i.ibb.co/GQchcr69/reee.png"
+                  class="tee-image"
+                  alt="티"
+                />
+                <div class="black-band" id="blackBand"></div>
+              </div>
+            </div>
+            <div class="grass"></div>
+          </div>
+
+          <p id="message">
+              내 골프티를 검정색 선까지만 꽂아줘
+          </p>
+          
+          <div id="lightGreenScreen" class="hidden">
+            <div class="lightgreen-content">
+              <img src="https://i.ibb.co/JwqMjrFr/lightgreen-page.png" alt="보상화면" class="lightgreen-image" />
+              <img src="https://i.ibb.co/VYxRqVxx/pass.png" alt="패스 아이콘" class="pass-icon" />
+            </div>
+          </div>
+          <!-- 하단 UI (하트 + 스테이지 + 버튼) -->
+          <div class="bottom-ui">
+            <div class="button-wrapper">
+              <button id="actionBtn">START</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- 하트 없음 팝업 -->
+    <div id="popup" class="popup hidden">
+      <div class="popup-content">
+        <p>
+          하트를 모두 사용했습니다.<br />
+          친구가 내 링크를 클릭하면 하트가 3개 충전돼요!
+        </p>
+        <button id="shareBtn">링크 공유하고 하트 받기</button>
+      </div>
+    </div>
+
+    <!-- 클리어 팝업 -->
+    <div id="clearPopup" class="popup hidden">
+      <div class="popup-content">
+        <p>축하합니다! 모든 스테이지를 통과했어요!</p>
+        <button id="rewardBtn">리워드 받기</button>
+      </div>
+    </div>
+
+    <!-- 디버그 라인 -->
+    <div id="debugLines"></div>
+  <img id="centralIcon" src="" alt="아이콘" style="position: fixed; top: 35%; left: 50%; transform: translateX(-50%); width: 8rem; z-index: 5; display: none;">
+  </body>
+  <script src="script.js"></script>
+</html>
