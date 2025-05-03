@@ -1,4 +1,6 @@
 window.addEventListener("DOMContentLoaded", () => {
+    console.log("🎮 게임 초기화 시작");
+    
     const band = document.getElementById("blackBand");
     const teeContainer = document.querySelector(".tee-container");
     const button = document.getElementById("actionBtn");
@@ -51,17 +53,33 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   
   
+    console.log("🔍 DOM 요소 확인:", {
+        startChallengeBtn: !!startChallengeBtn,
+        introScreen: !!introScreen,
+        gameScreen: !!gameScreen
+    });
+  
     startChallengeBtn?.addEventListener("click", () => {
-      console.log("🎯 게임시작버튼 클릭됨!");
+        console.log("🎯 게임시작버튼 클릭됨!");
+        console.log("현재 화면 상태:", {
+            isIntro,
+            introScreenHidden: introScreen?.classList.contains("hidden"),
+            gameScreenHidden: gameScreen?.classList.contains("hidden")
+        });
   
-      // 화면 전환
-      introScreen?.classList.add("hidden");
-      gameScreen?.classList.remove("hidden");
+        // 화면 전환
+        introScreen?.classList.add("hidden");
+        gameScreen?.classList.remove("hidden");
   
-      // 상태 초기화
-      isIntro = false;
-      stage = 1;
-      prepareStage();
+        console.log("화면 전환 후 상태:", {
+            introScreenHidden: introScreen?.classList.contains("hidden"),
+            gameScreenHidden: gameScreen?.classList.contains("hidden")
+        });
+  
+        // 상태 초기화
+        isIntro = false;
+        stage = 1;
+        prepareStage();
     });
     
     // 버튼 클릭했을 때 실행할 함수 따로 정의

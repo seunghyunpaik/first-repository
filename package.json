@@ -1,38 +1,16 @@
 {
-<<<<<<< HEAD
   "name": "golf_tee_new",
   "version": "1.0.0",
+  "description": "",
   "main": "script.js",
   "scripts": {
-    "dev": "http-server -p 3000",
+    "dev": "http-server -p 3001",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
     "http-server": "^14.1.1"
   }
 }
-=======
-  "name": "golf-tee-game",
-  "version": "1.0.0",
-  "private": true,
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "typescript": "^5.0.0",
-    "@types/react": "^18.2.0",
-    "@types/react-dom": "^18.2.0"
-  },
-  "scripts": {
-    "start": "vite",
-    "build": "vite build"
-  },
-  "devDependencies": {
-    "vite": "^4.0.0",
-    "@vitejs/plugin-react": "^4.0.0"
-  }
-} 
->>>>>>> 470e5cdbe115e647afa99f9ea926c6582b5ec28a
