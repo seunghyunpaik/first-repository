@@ -1,0 +1,16 @@
+{
+  "name": "golf_tee_new",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "dev": "http-server -p 3000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
